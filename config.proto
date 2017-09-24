@@ -1,0 +1,23 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "/usr/nbooks/MVideoHackaton/mydict.gzt"; // путь к корневому словарю
+  NumThreads = 2;
+  
+  Input = {
+      //File = "/usr/nbooks/MVideoHackaton/test.txt"
+  }
+
+  Articles = [
+    { Name = "наша_первая_грамматика" } // название статьи в корневом словаре,
+                                          // которая содержит запускаемую грамматику
+  ]
+
+  Facts = [
+    { Name = "Desc" }
+  ]
+  
+  Output = {
+      Format = xml
+  }
+}

@@ -1,0 +1,9 @@
+import "base.proto";           // описание protobuf-типов
+import "facttypes_base.proto"; // описание protobuf-типа NFactType.TFact
+message Desc: NFactType.TFact 
+{
+    optional string Main = 1 [(NFactType.normcase) = TITLE_CASE];
+    optional string LeftText = 2 [(NFactType.normcase) = TITLE_CASE, default = "none"];
+    optional string RightText = 3 [default = "none"];
+
+}
